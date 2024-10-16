@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<persona>
+    <correo>juan.perez@example.com</correo>
+    <edad>30</edad>
+    <nombre>Juan Pérez</nombre>
+</persona>

@@ -1,0 +1,9 @@
+<?xml version="1.0" encoding="UTF-8" standalone="yes"?>
+<catalogoLibros>
+    <libro>
+        <autor>ml</autor>
+        <añoPublicacion>125</añoPublicacion>
+        <genero>ml</genero>
+        <titulo>ml</titulo>
+    </libro>
+</catalogoLibros>
