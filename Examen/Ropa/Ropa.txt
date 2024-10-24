@@ -1,0 +1,4 @@
+Camisa, 30.00
+Pantalón, 40.00
+Camisa, 30.00
+Pantalón, 40.00

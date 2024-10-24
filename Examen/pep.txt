@@ -1,0 +1,3 @@
+Nombre: nom
+Apellido: nom
+Edad: 25

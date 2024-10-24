@@ -1,0 +1,3 @@
+Nombre: pepe
+Apellido: perez
+Edad: 25
