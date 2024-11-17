@@ -7,7 +7,7 @@
 -- Versión del servidor: 10.4.17-MariaDB
 -- Versión de PHP: 8.0.2
 
-
+DROP DATABASE IF EXISTS proyecto_gestion;
 CREATE DATABASE IF NOT EXISTS proyecto_gestion;
 USE proyecto_gestion
 
