@@ -1,4 +1,5 @@
 -- Creación de base de datos
+DROP DATABASE IF EXISTS proyecto_gestion;
 CREATE DATABASE IF NOT EXISTS proyecto_gestion;
 USE proyecto_gestion;
 
