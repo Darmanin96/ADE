@@ -1,0 +1,44 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Tab?>
+<?import javafx.scene.control.TabPane?>
+<?import javafx.scene.layout.BorderPane?>
+
+<BorderPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
+   <center>
+      <TabPane side="LEFT" tabClosingPolicy="UNAVAILABLE" BorderPane.alignment="CENTER">
+        <tabs>
+          <Tab fx:id="alumno" text="Alumnos">
+            <content>
+              <fx:include source="AlumnView.fxml" />
+            </content>
+          </Tab>
+          <Tab fx:id="empresas" text="Empresas">
+            <content>
+                <fx:include source="EmpresaView.fxml"/>
+            </content>
+          </Tab>
+            <Tab fx:id="Tutor_empresa" text="Tutor de empresa">
+               <content>
+                  <fx:include source="Tutor_Empresa.fxml" />
+               </content>
+            </Tab>
+            <Tab fx:id="Tutor_grupo" text="Tutor de grupo">
+               <content>
+                  <fx:include source="Tutor_Grupo.fxml" />
+               </content>
+            </Tab>
+            <Tab fx:id="Visitas" text="Visitas">
+               <content>
+                  <fx:include source="Visitas.fxml" />
+               </content>
+            </Tab>
+            <Tab fx:id="Comentarios" text="Comentarios">
+               <content>
+                  <fx:include source="Comentarios.fxml" />
+               </content>
+            </Tab>
+        </tabs>
+      </TabPane>
+   </center>
+</BorderPane>
