@@ -100,7 +100,7 @@ CREATE TABLE `comentarios` (
 ) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_spanish_ci;
 
 -- Tabla 'asignaciones'
-CREATE TABLE `asignaciones` (
+CREATE TABLE `alumnos_empresas_rel` (
   `Id_Asignacion` int(11) NOT NULL AUTO_INCREMENT,
   `Id_Alumno` int(11) NOT NULL,
   `Id_Empresa` int(11) NOT NULL,
