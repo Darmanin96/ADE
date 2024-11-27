@@ -1,3 +1,0 @@
-Nombre: zx
-Apellido: zxc
-Edad: 25

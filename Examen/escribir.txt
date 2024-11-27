@@ -1,4 +1,0 @@
-ID: 1
-Nombre: Pre
-Sueldo: 800.0
-Categoria: Pe

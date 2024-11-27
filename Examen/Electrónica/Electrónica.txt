@@ -1,6 +1,0 @@
-Televisor, 500.00
-Laptop, 700.00
-Microondas, 150.00
-Televisor, 500.00
-Laptop, 700.00
-Microondas, 150.00
