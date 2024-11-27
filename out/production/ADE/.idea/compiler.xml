@@ -1,0 +1,17 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="CompilerConfiguration">
+    <annotationProcessing>
+      <profile name="Maven default annotation processors profile" enabled="true">
+        <sourceOutputDir name="target/generated-sources/annotations" />
+        <sourceTestOutputDir name="target/generated-test-sources/test-annotations" />
+        <outputRelativeToContentRoot value="true" />
+        <module name="crudBaseDatos" />
+        <module name="BDSQlite" />
+        <module name="Crud_universidad" />
+        <module name="BasesdeDatos" />
+        <module name="C3P0" />
+      </profile>
+    </annotationProcessing>
+  </component>
+</project>

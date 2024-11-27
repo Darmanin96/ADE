@@ -1,0 +1,207 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="AutoImportSettings">
+    <option name="autoReloadType" value="SELECTIVE" />
+  </component>
+  <component name="ChangeListManager">
+    <list default="true" id="e69945ee-98a7-4f17-815b-c95c2985885a" name="Changes" comment="">
+      <change afterPath="$PROJECT_DIR$/.idea/ADE.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD SQlite/src/main/java/dad/Crud.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BD SQlite/src/main/java/dad/EjemploSQLite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasesdeDatos/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasesdeDatos/src/main/java/Sql/Consultar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasesdeDatos/src/main/java/Sql/Delete.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasesdeDatos/src/main/java/Sql/Insert.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasesdeDatos/src/main/java/Sql/Modificar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasesdeDatos/src/main/java/conexion/conexionDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/BasesdeDatos/src/test/java/conexion/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C3P0/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C3P0/src/main/java/dad/DBCPDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C3P0/src/main/java/dad/EjemploSQLite.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C3P0/src/main/java/dad/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C3P0/src/main/java/dad/TomcatDataSource.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/C3P0/src/test/java/dad/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud universidad/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud universidad/src/main/java/dad/Conexion/Crud/Cursos.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud universidad/src/main/java/dad/Conexion/Crud/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud universidad/src/main/java/dad/Conexion/conexion.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Crud universidad/src/test/java/dad/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DerbyExample/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DerbyExample/src/main/java/dad/DerbyExample.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DerbyExample/src/main/java/dad/H2.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DerbyExample/src/main/java/dad/HSQLDB.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/DerbyExample/src/test/java/dad/AppTest.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen/.idea/.gitignore" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen/.idea/encodings.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen/.idea/misc.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen/.idea/vcs.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Examen/src/main/java/dad/Examen.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Swing/.idea/Swing.iml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Swing/EscribirTXT/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Swing/EscribirTXT/src/main/java/dad/CrudBinarios/ActualizarRegistro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Swing/EscribirTXT/src/main/java/dad/CrudBinarios/CrearGUI.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Swing/EscribirTXT/src/main/java/dad/CrudBinarios/EliminarRegistro.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Swing/EscribirTXT/src/main/java/dad/CrudBinarios/LeerGUIJtexArea.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Swing/EscribirTXT/src/main/java/dad/CrudBinarios/MenuPrincipal.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/Swing/EscribirTXT/src/main/java/dad/CrudBinarios/modificar.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crudBaseDatos/pom.xml" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crudBaseDatos/src/main/java/Main.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crudBaseDatos/src/main/java/dad/conexion/conexionDataBase.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crudBaseDatos/src/main/java/sql/SqlSentences.java" afterDir="false" />
+      <change afterPath="$PROJECT_DIR$/crudBaseDatos/src/test/java/dad/AppTest.java" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/.idea/.gitignore" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/.idea/encodings.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/.idea/misc.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/.idea/uiDesigner.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/XML.eml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/XML.userlibraries" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/catalogo.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/employee.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/persona.xml" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/pom.xml" beforeDir="false" afterPath="$PROJECT_DIR$/BD SQlite/pom.xml" afterDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/src/main/java/Libro/CatalogoLibros.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/src/main/java/Libro/Libro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/src/main/java/Libro/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/src/main/java/TiendaOnline/Clientes.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/src/main/java/TiendaOnline/Main.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/src/main/java/TiendaOnline/Pedidos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/src/main/java/TiendaOnline/Productos.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/src/main/java/TiendaOnline/Tienda.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/src/main/java/dad/ExamlesofXML/Libro.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/src/main/java/dad/ExamlesofXML/Persona.java" beforeDir="false" />
+      <change beforePath="$PROJECT_DIR$/XML/src/test/java/dad/ExamlesofXML/AppTest.java" beforeDir="false" afterPath="$PROJECT_DIR$/BD SQlite/src/test/java/dad/AppTest.java" afterDir="false" />
+    </list>
+    <option name="SHOW_DIALOG" value="false" />
+    <option name="HIGHLIGHT_CONFLICTS" value="true" />
+    <option name="HIGHLIGHT_NON_ACTIVE_CHANGELIST" value="false" />
+    <option name="LAST_RESOLUTION" value="IGNORE" />
+  </component>
+  <component name="FileTemplateManagerImpl">
+    <option name="RECENT_TEMPLATES">
+      <list>
+        <option value="Class" />
+      </list>
+    </option>
+  </component>
+  <component name="Git.Settings">
+    <option name="RECENT_GIT_ROOT_PATH" value="$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectColorInfo">{
+  &quot;associatedIndex&quot;: 1
+}</component>
+  <component name="ProjectId" id="2nn7OWFRUt3kZmXZ9ZWeXgn6Dip" />
+  <component name="ProjectViewState">
+    <option name="hideEmptyMiddlePackages" value="true" />
+    <option name="showLibraryContents" value="true" />
+  </component>
+  <component name="PropertiesComponent">{
+  &quot;keyToString&quot;: {
+    &quot;Application.Consultar.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Crud.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Cursos.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Delete.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DerbyExample.executor&quot;: &quot;Run&quot;,
+    &quot;Application.DervyExample.executor&quot;: &quot;Run&quot;,
+    &quot;Application.EjemploSQLite.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Insert.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Application.MainApplication.executor&quot;: &quot;Run&quot;,
+    &quot;Application.Modificar.executor&quot;: &quot;Run&quot;,
+    &quot;Application.conexionDataBase.executor&quot;: &quot;Run&quot;,
+    &quot;Application.dad.Main.executor&quot;: &quot;Run&quot;,
+    &quot;Maven. [org.apache.maven.plugins:maven-archetype-plugin:RELEASE:generate].executor&quot;: &quot;Run&quot;,
+    &quot;RunOnceActivity.ShowReadmeOnStart&quot;: &quot;true&quot;,
+    &quot;git-widget-placeholder&quot;: &quot;main&quot;,
+    &quot;kotlin-language-version-configured&quot;: &quot;true&quot;,
+    &quot;last_opened_file_path&quot;: &quot;C:/Users/darma/Documents/GitHub/Dad/MiCV&quot;,
+    &quot;node.js.detected.package.eslint&quot;: &quot;true&quot;,
+    &quot;node.js.detected.package.tslint&quot;: &quot;true&quot;,
+    &quot;node.js.selected.package.eslint&quot;: &quot;(autodetect)&quot;,
+    &quot;node.js.selected.package.tslint&quot;: &quot;(autodetect)&quot;,
+    &quot;nodejs_package_manager_path&quot;: &quot;npm&quot;,
+    &quot;vue.rearranger.settings.migration&quot;: &quot;true&quot;
+  },
+  &quot;keyToStringList&quot;: {
+    &quot;DatabaseDriversLRU&quot;: [
+      &quot;mysql&quot;
+    ]
+  }
+}</component>
+  <component name="RunManager" selected="Application.Crud">
+    <configuration name="Crud" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dad.Crud" />
+      <module name="BDSQlite" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="Main" />
+      <module name="crudBaseDatos" />
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <configuration name="dad.Main" type="Application" factoryName="Application" temporary="true" nameIsGenerated="true">
+      <option name="MAIN_CLASS_NAME" value="dad.Main" />
+      <module name="C3P0" />
+      <extension name="coverage">
+        <pattern>
+          <option name="PATTERN" value="dad.*" />
+          <option name="ENABLED" value="true" />
+        </pattern>
+      </extension>
+      <method v="2">
+        <option name="Make" enabled="true" />
+      </method>
+    </configuration>
+    <recent_temporary>
+      <list>
+        <item itemvalue="Application.Crud" />
+        <item itemvalue="Application.dad.Main" />
+        <item itemvalue="Application.Main" />
+      </list>
+    </recent_temporary>
+  </component>
+  <component name="SharedIndexes">
+    <attachedChunks>
+      <set>
+        <option value="bundled-jdk-9823dce3aa75-b114ca120d71-intellij.indexing.shared.core-IU-242.21829.142" />
+        <option value="bundled-js-predefined-d6986cc7102b-7c0b70fcd90d-JavaScript-IU-242.21829.142" />
+      </set>
+    </attachedChunks>
+  </component>
+  <component name="SpellCheckerSettings" RuntimeDictionaries="0" Folders="0" CustomDictionaries="0" DefaultDictionary="application-level" UseSingleDictionary="true" transferred="true" />
+  <component name="TaskManager">
+    <task active="true" id="Default" summary="Default task">
+      <changelist id="e69945ee-98a7-4f17-815b-c95c2985885a" name="Changes" comment="" />
+      <created>1729596956756</created>
+      <option name="number" value="Default" />
+      <option name="presentableId" value="Default" />
+      <updated>1729596956756</updated>
+      <workItem from="1729596957315" duration="38000" />
+      <workItem from="1730205780532" duration="4207000" />
+      <workItem from="1730275784306" duration="7000" />
+      <workItem from="1730291770206" duration="4314000" />
+      <workItem from="1730368644243" duration="113000" />
+      <workItem from="1730708636292" duration="1720000" />
+      <workItem from="1731065529186" duration="4254000" />
+      <workItem from="1731485771418" duration="87000" />
+      <workItem from="1731500706241" duration="4520000" />
+      <workItem from="1731575566448" duration="13000" />
+    </task>
+    <servers />
+  </component>
+  <component name="TypeScriptGeneratedFilesManager">
+    <option name="version" value="3" />
+  </component>
+</project>

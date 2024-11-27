@@ -1,0 +1,71 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dad.Controllers.AsignacionController">
+   <center>
+      <HBox BorderPane.alignment="CENTER">
+         <children>
+            <TableView fx:id="tableAsignacion">
+              <columns>
+                <TableColumn fx:id="idAsignacion" prefWidth="75.0" text="Id de la Asignación" />
+                <TableColumn fx:id="idAlumno" prefWidth="75.0" text="Id del Alumno" />
+                  <TableColumn fx:id="Nombre" prefWidth="75.0" text="Nombre" />
+                  <TableColumn fx:id="Apellidos" prefWidth="75.0" text="Apellidos" />
+                  <TableColumn fx:id="idEmpresa" prefWidth="75.0" text="Id de la Empresa" />
+                  <TableColumn fx:id="Empresa" prefWidth="75.0" text="Empresa" />
+                  <TableColumn fx:id="IdTutorEmpresa" prefWidth="75.0" text="Id del Tutor de la Empresa" />
+                  <TableColumn fx:id="IdTutorGrupo" prefWidth="75.0" text="Id del Tutor del Docente" />
+                  <TableColumn fx:id="FechaInicio" prefWidth="75.0" text="Fecha de Inicio" />
+                  <TableColumn fx:id="FechaFin" prefWidth="75.0" text="Fecha final" />
+              </columns>
+            </TableView>
+            <HBox>
+               <children>
+                  <AnchorPane fx:id="detallePanel">
+                     <children>
+                        <Label layoutY="192.0" text="Seleccione una asignacion de la izquierda" />
+                     </children></AnchorPane>
+               </children>
+            </HBox>
+         </children>
+      </HBox>
+   </center>
+   <bottom>
+      <GridPane BorderPane.alignment="CENTER">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+          <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+         <children>
+            <HBox alignment="TOP_RIGHT">
+               <children>
+                  <Button fx:id="Añadir" defaultButton="true" mnemonicParsing="false" onAction="#onAñadirAction" text="Añadir">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+                  <Button fx:id="Eliminar" mnemonicParsing="false" onAction="#onEliminarAction" text="Eliminar">
+                     <HBox.margin>
+                        <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
+                     </HBox.margin>
+                  </Button>
+               </children>
+            </HBox>
+         </children>
+      </GridPane>
+   </bottom>
+</BorderPane>

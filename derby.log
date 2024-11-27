@@ -1,0 +1,13 @@
+----------------------------------------------------------------
+Wed Nov 13 12:50:32 WET 2024:
+Booting Derby version The Apache Software Foundation - Apache Derby - 10.15.2.0 - (1873585): instance a816c00e-0193-2593-5090-00000ec00000 
+on database directory C:\Users\darma\Documents\GitHub\ADE\miBaseDeDatos with class loader jdk.internal.loader.ClassLoaders$AppClassLoader@76ed5528 
+Loaded from file:/C:/Users/darma/.m2/repository/org/apache/derby/derby/10.15.2.0/derby-10.15.2.0.jar
+java.vendor=Oracle Corporation
+java.runtime.version=22.0.2+9-70
+user.dir=C:\Users\darma\Documents\GitHub\ADE
+os.name=Windows 11
+os.arch=amd64
+os.version=10.0
+derby.system.home=null
+Database Class Loader started - derby.database.classpath=''
