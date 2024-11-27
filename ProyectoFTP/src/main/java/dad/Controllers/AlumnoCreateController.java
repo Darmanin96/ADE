@@ -54,10 +54,10 @@ public class AlumnoCreateController implements Initializable {
             return;
         }
 
-        if (!validarContacto(Contactos.getText())) {
-            mostrarAlerta("Contacto inválido", "Por favor, introduce un correo electrónico o un número de teléfono móvil válido.");
-            return;
-        }
+//        if (!validarContacto(Contactos.getText())) {
+//            mostrarAlerta("Contacto inválido", "Por favor, introduce un correo electrónico o un número de teléfono móvil válido.");
+//            return;
+//        }
 
         confirmar = true;
         cerrar();
@@ -97,13 +97,13 @@ public class AlumnoCreateController implements Initializable {
     }
 
 
-    private boolean validarContacto(String contacto) {
-        String regexMovil = "^\\+?\\d{9,15}$";
-        boolean esTelefonoValido = contacto.matches(regexMovil);
-        String regexCorreo = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
-        boolean esCorreoValido = contacto.matches(regexCorreo);
-        return esTelefonoValido || esCorreoValido;
-    }
+//    private boolean validarContacto(String contacto) {
+//        String regexMovil = "^\\+?\\d{9,15}$";
+//        boolean esTelefonoValido = contacto.matches(regexMovil);
+//        String regexCorreo = "^[a-zA-Z0-9._%+-]+@[a-zA-Z0-9.-]+\\.[a-zA-Z]{2,6}$";
+//        boolean esCorreoValido = contacto.matches(regexCorreo);
+//        return esTelefonoValido || esCorreoValido;
+//    }
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
@@ -130,9 +130,9 @@ public class AlumnoCreateController implements Initializable {
     private boolean validarCampos() {
         boolean nombreValido = !Nombre.getText().isBlank() && Nombre.getText().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$");
         boolean apellidosValidos = !Apellidos.getText().isBlank() && Apellidos.getText().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$");
-        boolean tutorGrupoValido = !tutorGrupo.getText().isBlank() && tutorGrupo.getText().matches("\"^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$\"");
-        boolean tutorEmpresaValido = !tutorEmpresa.getText().isBlank() && tutorEmpresa.getText().matches("\"^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$\"");
-        return nombreValido && apellidosValidos && tutorGrupoValido && tutorEmpresaValido && validarContacto(Contactos.getText());
+        boolean tutorGrupoValido = !tutorGrupo.getText().isBlank() && tutorGrupo.getText().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$");
+        boolean tutorEmpresaValido = !tutorEmpresa.getText().isBlank() && tutorEmpresa.getText().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$");
+        return nombreValido && apellidosValidos && tutorGrupoValido && tutorEmpresaValido;
     }
 
     public AlumnoCreateController() {

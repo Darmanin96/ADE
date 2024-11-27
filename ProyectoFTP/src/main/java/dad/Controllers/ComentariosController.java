@@ -1,6 +1,7 @@
 package dad.Controllers;
 
 import dad.Conexion.*;
+import static dad.Conexion.Conectar.getConnection;
 import dad.Model.*;
 import javafx.collections.*;
 import javafx.event.*;
@@ -38,6 +39,9 @@ public class ComentariosController implements Initializable {
     private TableColumn<Comentarios, Integer> idComentario;
 
     @FXML
+    private TableColumn<Comentarios, String> nombreEmpresa;
+
+    @FXML
     private TableColumn<Comentarios, Integer> idEmpresa;
 
     @FXML
@@ -65,7 +69,8 @@ public class ComentariosController implements Initializable {
                     String comentario = comentariosCreateController.getComentario().getText();
                     LocalDate fecha = comentariosCreateController.getFecha().getValue();
                     Integer idEmpresaVerdad = comentariosCreateController.getIdEmpresa().getValue();
-                    int nuevoId = insertarComentarios(comentario,fecha,idEmpresaVerdad);
+                    String EmpresaNombre = obtenerNombreEmpresa(idEmpresaVerdad);
+                    int nuevoId = insertarComentarios(comentario,fecha,idEmpresaVerdad,EmpresaNombre);
                     if (nuevoId > 0) {
                         cargarTablaComentarios();
                     } else {
@@ -78,38 +83,33 @@ public class ComentariosController implements Initializable {
                 }
             });
         }
-        ComentariosCreateController comentariosCreateController = new ComentariosCreateController();
-        Stage stage = new Stage();
-        stage.setTitle("Nuevos Comentarios");
-        stage.setScene(new Scene(comentariosCreateController.getRoot()));
-        stage.showAndWait();
-
-        if (comentariosCreateController.isConfirmar()) {
-            String comentarios = comentariosCreateController.getComentario().getText();
-            LocalDate fecha = comentariosCreateController.getFecha().getValue();
-            Integer idEmpresa = comentariosCreateController.getIdEmpresa().getValue();
-
-            if (idEmpresa != null) {
-                int nuevoId = insertarComentarios(comentarios, fecha, idEmpresa);
-                if (nuevoId > 0) {
-                    cargarTablaComentarios();
-                } else {
-                    mostrarError("No se pudo añadir el comentario.", "Hubo un problema al insertar el comentario en la base de datos.");
-                }
-            } else {
-                mostrarError("Falta seleccionar la empresa.", "Por favor, selecciona una empresa antes de continuar.");
-            }
-        }
     }
 
-    private int insertarComentarios(String comentarios, LocalDate fecha, Integer idEmpresa) {
-        String sql = "INSERT INTO comentarios_empresa(Comentario, Fecha_Comentario, Id_Empresa) VALUES(?, ?, ?)";
+    private String obtenerNombreEmpresa(Integer idEmpresa){
+        String sql = "SELECT Nombre FROM empresas WHERE Id_Empresa = ?";
+        String nombreEmpresa = "";
+        try (Connection conn = getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, idEmpresa);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                nombreEmpresa = rs.getString("Nombre");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return nombreEmpresa;
+    }
+
+    private int insertarComentarios(String comentarios, LocalDate fecha, Integer idEmpresa, String nombreEmpresa) {
+        String sql = "INSERT INTO comentarios_empresa(Comentario, Fecha_Comentario, Id_Empresa, nombreEmpresa) VALUES(?, ?, ?, ?)";
 
         try (Connection connection = Conectar.getConnection();
              PreparedStatement stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             stmt.setString(1, comentarios);
             stmt.setString(2, fecha.toString());
             stmt.setInt(3, idEmpresa);
+            stmt.setString(4, nombreEmpresa); // Incluye el valor de nombreEmpresa
             int i = stmt.executeUpdate();
             if (i > 0) {
                 try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
@@ -124,6 +124,7 @@ public class ComentariosController implements Initializable {
         }
         return -1;
     }
+
 
     @FXML
     void onEliminarAction(ActionEvent event) {
@@ -168,6 +169,7 @@ public class ComentariosController implements Initializable {
         Comentario.setCellValueFactory(new PropertyValueFactory<>("comentario"));
         Fecha.setCellValueFactory(new PropertyValueFactory<>("fechaComentario"));
         idEmpresa.setCellValueFactory(new PropertyValueFactory<>("idEmpresa"));
+        nombreEmpresa.setCellValueFactory(new PropertyValueFactory<>("nombreEmpresa"));
         cargarTablaComentarios();
         tableComentarios.setItems(comentariosList);
         tableComentarios.getSelectionModel().selectedItemProperty().addListener((observable, oldValue, newValue) -> {
@@ -203,7 +205,8 @@ public class ComentariosController implements Initializable {
                         rs.getInt("Id_Comentario"),
                         rs.getString("Comentario"),
                         rs.getDate("Fecha_Comentario").toLocalDate(),
-                        rs.getInt("Id_Empresa")
+                        rs.getInt("Id_Empresa"),
+                        rs.getString("nombreEmpresa")
                 ));
             }
             tableComentarios.setItems(comentariosList);

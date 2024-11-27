@@ -10,16 +10,18 @@ public class Comentarios  {
     private final StringProperty Comentario = new SimpleStringProperty();
     private final ObjectProperty<LocalDate> fechaComentario = new SimpleObjectProperty<>();
     private final IntegerProperty idEmpresa = new SimpleIntegerProperty();
+    private final StringProperty nombreEmpresa  = new SimpleStringProperty();
 
 
     public Comentarios() {
     }
 
-    public Comentarios(Integer idComentario, String Comentario, LocalDate fechaComentario, Integer idEmpresa) {
+    public Comentarios(Integer idComentario, String Comentario, LocalDate fechaComentario, Integer idEmpresa, String nombreEmpresa) {
         this.idComentario.set(idComentario);
         this.Comentario.set(Comentario);
         this.fechaComentario.set(fechaComentario);
         this.idEmpresa.set(idEmpresa);
+        this.nombreEmpresa.set(nombreEmpresa);
     }
 
 
@@ -54,5 +56,13 @@ public class Comentarios  {
 
     public IntegerProperty idEmpresaProperty() {
         return idEmpresa;
+    }
+
+    public String getNombreEmpresa() {
+        return nombreEmpresa.get();
+    }
+
+    public StringProperty nombreEmpresaProperty() {
+        return nombreEmpresa;
     }
 }

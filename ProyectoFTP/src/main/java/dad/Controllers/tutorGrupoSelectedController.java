@@ -41,10 +41,8 @@ public class tutorGrupoSelectedController implements Initializable {
     @FXML
     void onActualizarAction(ActionEvent event) {
         String nombre = Nombre.getText();
-        Curso grupo = Grupo.getSelectionModel().getSelectedItem(); // Es mejor mantenerlo como Curso en lugar de String
+        Curso grupo = Grupo.getSelectionModel().getSelectedItem();
         Integer idAlumno = IdAlumno.getValue();
-
-        // Verificamos que todos los campos necesarios estén seleccionados
         if (nombre.isEmpty() || grupo == null || idAlumno == null) {
             System.err.println("Por favor, complete todos los campos.");
             return;
@@ -96,14 +94,11 @@ public class tutorGrupoSelectedController implements Initializable {
     }
 
     private void cargarIdAlumnos() {
-        // Llenar el ChoiceBox de IdAlumno con los IDs de los alumnos disponibles
         List<Integer> alumnos = obtenerAlumnos();
         IdAlumno.getItems().setAll(alumnos);
     }
 
     private List<Integer> obtenerAlumnos() {
-        // Aquí deberías hacer una consulta a la base de datos para obtener los Ids de los alumnos
-        // Esto es un ejemplo de cómo podrías obtener una lista de IDs de alumnos
         List<Integer> alumnos = new ArrayList<>();
         String sql = "SELECT Id_Alumno FROM alumno";
         try (Connection con = Conectar.getConnection();

@@ -49,21 +49,15 @@ public class AsignacionSelectedController implements Initializable {
 
     @FXML
     void onAnadirAction(ActionEvent event) {
-        // Obtener los valores de los ChoiceBoxes y DatePickers
         String fechaInicio = FechaInicio.getValue().toString();
         String fechaFin = FechaFin.getValue().toString();
         Integer idAlumno = IdAlumno.getValue();
         Integer idEmpresa = IdEmpresa.getValue();
         Integer idTutorDocente = IdTutorDocente.getValue();
         Integer idTutorEmpresa = IdTutorEmpresa.getValue();
-
-        // Sentencia SQL para actualizar la base de datos
         String sql = "UPDATE alumnos_empresas_rel SET Id_Alumno=?, Id_Empresa=?, Id_Tutor_Empresa=?, Id_Tutor_Docente=?, Fecha_Inicio=?, Fecha_Fin=? WHERE Id_Asignacion=?";
-
         try (Connection con = Conectar.getConnection();
              PreparedStatement stmt = con.prepareStatement(sql)) {
-
-            // Asignar los valores obtenidos a los parámetros de la sentencia SQL
             stmt.setInt(1, idAlumno);
             stmt.setInt(2, idEmpresa);
             stmt.setInt(3, idTutorEmpresa);
@@ -71,8 +65,6 @@ public class AsignacionSelectedController implements Initializable {
             stmt.setString(5, fechaInicio);
             stmt.setString(6, fechaFin);
             stmt.setInt(7, asignacionSeleccionado.getIdAsignacion()); // Usamos el ID de la asignación seleccionada
-
-            // Ejecutar la actualización
             int rowsUpdated = stmt.executeUpdate();
             if (rowsUpdated > 0) {
                 System.out.println("La asignación ha sido actualizada con éxito.");
@@ -106,9 +98,7 @@ public class AsignacionSelectedController implements Initializable {
     }
 
     public void obtenerAsignacion(Asignacion asignacion) {
-        // Asignar el objeto asignación recibido
         this.asignacionSeleccionado = asignacion;
-        // Si deseas, puedes inicializar los ChoiceBoxes con los valores de la asignación
         IdAlumno.setValue(asignacion.getIdAlumno());
         IdEmpresa.setValue(asignacion.getIdEmpresa());
         IdTutorDocente.setValue(asignacion.getIdTutorGrupo());
@@ -119,7 +109,6 @@ public class AsignacionSelectedController implements Initializable {
 
     @Override
     public void initialize(URL location, ResourceBundle resources) {
-        // Inicializar los ChoiceBox con los datos de la base de datos
         cargarDatosChoiceBoxes();
     }
 

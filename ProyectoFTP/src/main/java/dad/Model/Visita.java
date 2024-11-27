@@ -11,16 +11,22 @@ public class Visita {
     private final StringProperty observaciones = new SimpleStringProperty();
     private final IntegerProperty idAlumno = new SimpleIntegerProperty();
     private final IntegerProperty idTutor = new SimpleIntegerProperty();
+    private final StringProperty nombreAlumno = new SimpleStringProperty();
+    private final StringProperty apellidosAlumno = new SimpleStringProperty();
+    private final StringProperty nombreTutorGrupo = new SimpleStringProperty();
 
     public Visita() {
     }
 
-    public Visita(Integer idVisita, LocalDate fecha, String observaciones, Integer idAlumno, Integer idTutor) {
+    public Visita(Integer idVisita, LocalDate fecha, String observaciones, Integer idAlumno, Integer idTutor,String nombreAlumno,String nombreTutorGrupo,String apellidosAlumno) {
         this.idVisita.set(idVisita);
         this.fecha.set(fecha);
         this.observaciones.set(observaciones);
         this.idAlumno.set(idAlumno);
         this.idTutor.set(idTutor);
+        this.nombreAlumno.set(nombreAlumno);
+        this.nombreTutorGrupo.set(nombreTutorGrupo);
+        this.apellidosAlumno.set(apellidosAlumno);
     }
 
     public int getIdVisita() {
@@ -79,7 +85,34 @@ public class Visita {
         this.idTutor.set(idTutor);
     }
 
+    public String getNombreAlumno() {
+        return nombreAlumno.get();
+    }
+
+    public StringProperty nombreAlumnoProperty() {
+        return nombreAlumno;
+    }
+
+    public String getNombreTutorGrupo() {
+        return nombreTutorGrupo.get();
+    }
+
+    public StringProperty nombreTutorGrupoProperty() {
+        return nombreTutorGrupo;
+    }
+
+    public String getApellidosAlumno() {
+        return apellidosAlumno.get();
+    }
+
+    public StringProperty apellidosAlumnoProperty() {
+        return apellidosAlumno;
+    }
+
     public IntegerProperty idTutorProperty() {
         return idTutor;
+
+
+
     }
 }

@@ -157,7 +157,7 @@ public class AsignacionController implements Initializable {
         return empresa;
     }
 
-    // Método para insertar< la asignación en la base de datos
+
     private int insertarAsignacion(Integer idAlumno, Integer idEmpresa, Integer tutorEmpresa, Integer tutorGrupo,
                                    LocalDate fechaInicio, LocalDate fechaFin, String nombre, String apellidos, String empresa) {
         String sql = "INSERT INTO alumnos_empresas_rel(Id_Alumno, Nombre, Apellidos, Id_Empresa, Empresa, Id_Tutor_Empresa, Id_Tutor_Docente, Fecha_Inicio, Fecha_Fin) " +
@@ -173,7 +173,7 @@ public class AsignacionController implements Initializable {
             stmt.setInt(7, tutorGrupo);
             stmt.setString(8, fechaInicio.toString());
             stmt.setString(9, fechaFin.toString());
-            return stmt.executeUpdate(); // Ejecuta la inserción y devuelve el númer
+            return stmt.executeUpdate();
         } catch (SQLException e) {
             e.printStackTrace();
         }

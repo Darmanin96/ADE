@@ -28,7 +28,7 @@ public class VisitaCreateController implements Initializable {
     private DatePicker date;
 
     @FXML
-    private ChoiceBox<String> idAlumno;
+    private ChoiceBox<Integer> idAlumno;
 
     @FXML
     private ChoiceBox<Integer> idTutor;
@@ -81,11 +81,8 @@ public class VisitaCreateController implements Initializable {
     }
 
     private boolean validarCampos(){
-        boolean fechaValidar = date.getValue().toString().isEmpty();
         boolean observacionesValidar = !observaciones.getText().isBlank() && observaciones.getText().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$") ;
-        boolean idAlumnoValidar = idAlumno.getValue().toString().isEmpty();
-        boolean idTutorValidar = idTutor.getValue().toString().isEmpty();
-        return  fechaValidar && idAlumnoValidar && idTutorValidar && observacionesValidar;
+        return  observacionesValidar;
     }
 
     @FXML
@@ -116,14 +113,14 @@ public class VisitaCreateController implements Initializable {
 
 
     private void cargarIdAlumno(){
-        String sql = "SELECT Nombre FROM alumno";
+        String sql = "SELECT Id_Alumno FROM alumno";
         try (Connection connection = Conectar.getConnection();
              PreparedStatement stmt = connection.prepareStatement(sql);
              ResultSet rs = stmt.executeQuery()) {
 
-            ObservableList<String> alumnos = FXCollections.observableArrayList();
+            ObservableList<Integer> alumnos = FXCollections.observableArrayList();
             while (rs.next()) {
-                alumnos.add(rs.getString("Nombre"));
+                alumnos.add(rs.getInt("Id_Alumno"));
             }
             idAlumno.setItems(alumnos);
         } catch (SQLException e) {
@@ -191,11 +188,12 @@ public class VisitaCreateController implements Initializable {
         this.date = date;
     }
 
-    public ChoiceBox<String> getIdAlumno() {
+
+    public ChoiceBox<Integer> getIdAlumno() {
         return idAlumno;
     }
 
-    public void setIdAlumno(ChoiceBox<String> idAlumno) {
+    public void setIdAlumno(ChoiceBox<Integer> idAlumno) {
         this.idAlumno = idAlumno;
     }
 

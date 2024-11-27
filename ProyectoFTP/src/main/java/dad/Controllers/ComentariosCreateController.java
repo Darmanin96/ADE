@@ -41,6 +41,7 @@ public class ComentariosCreateController implements Initializable {
     void onAñadirAction(ActionEvent event) {
         if (!validarCampos()){
             mostrarAlerta("Campos inválidos", "Por favor corrige los errores antes de continuar.");
+            return;
         }
             confirmar = true;
             cerrar();
@@ -70,8 +71,9 @@ public class ComentariosCreateController implements Initializable {
     }
 
     private boolean validarCampos(){
-        boolean comentarioValido = !Comentario.getText().isBlank() && Comentario.getText().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ ]+$");
-        return comentarioValido;
+        boolean comentarioValido = !Comentario.getText().isBlank() && Comentario.getText().matches("^[a-zA-ZáéíóúÁÉÍÓÚñÑ0-9,.!?\\- ]+$");
+        boolean empresaValida = IdEmpresa.getValue() != null;
+        return comentarioValido && empresaValida;
     }
 
     @FXML

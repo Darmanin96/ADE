@@ -1,6 +1,7 @@
 package dad.Controllers;
 
 import dad.Conexion.*;
+import static dad.Conexion.Conectar.getConnection;
 import dad.Model.*;
 import javafx.collections.*;
 import javafx.event.*;
@@ -42,6 +43,18 @@ public class VisitaController implements Initializable {
     private TableColumn<Visita, String> Observaciones;
 
     @FXML
+    private TableColumn<Visita, String> apellidosAlumno;
+
+    @FXML
+    private TableColumn<Visita, String> nombreAlumno;
+
+
+
+    @FXML
+    private TableColumn<Visita, String> nombreTutor;
+
+
+    @FXML
     private AnchorPane detallePanel;
 
     @FXML
@@ -53,19 +66,25 @@ public class VisitaController implements Initializable {
     private ObservableList<Visita> visitasLista = FXCollections.observableArrayList();
 
 
+
+
+
     @FXML
     void onAñadirAction(ActionEvent event) {
          VisitaCreateController visitaCreateController = new VisitaCreateController();
          Stage stage = new Stage();
-         stage.setTitle("NUeva visita");
+         stage.setTitle("Nueva visita");
          stage.setScene(new Scene(visitaCreateController.getRoot()));
          stage.showAndWait();
          if (visitaCreateController.isConfirmar()){
-             String idAlumnoVerdad = visitaCreateController.getIdAlumno().getValue();
+             Integer idAlumnoVerdad = visitaCreateController.getIdAlumno().getValue();
              Integer idTutorVerdad = visitaCreateController.getIdTutor().getValue();
              String observaciones = visitaCreateController.getObservaciones().getText();
              LocalDate fecha = visitaCreateController.getDate().getValue();
-             int nuevoId =  insertarVisita(fecha,observaciones,idAlumnoVerdad,idTutorVerdad);
+             String nombreAlumno = obtenerNombreAlumno(idAlumnoVerdad);
+             String apellidosAlumno = obtenerApellidosAlumno(idAlumnoVerdad);
+             String nombreTutor = obtenerNombreTutor(idTutorVerdad);
+             int nuevoId =  insertarVisita(fecha,observaciones,idAlumnoVerdad,idTutorVerdad,nombreTutor,apellidosAlumno,nombreAlumno);
              if (nuevoId > 0){
                  cargarTablaVisita();
              }else {
@@ -78,14 +97,17 @@ public class VisitaController implements Initializable {
          }
     }
 
-    private int insertarVisita(LocalDate fecha,String observaciones,String idAlumno,Integer idTutor){
-            String sql = "INSERT INTO visitas(Fecha_Visita,Observaciones,Id_Alumno,Id_Tutor) VALUES(?,?,?,?)";
+    private int insertarVisita(LocalDate fecha,String observaciones,Integer idAlumno,Integer idTutor,String nombre,String apellidos,String nombreTutor){
+            String sql = "INSERT INTO visitas(Fecha_Visita,Observaciones,Id_Alumno,nombreAlumno,apellidosAlumno,Id_Tutor,nombreTutorGrupo) VALUES(?,?,?,?,?,?,?)";
         try (Connection connection = Conectar.getConnection();
              PreparedStatement stmt = connection.prepareStatement(sql, Statement.RETURN_GENERATED_KEYS)) {
             stmt.setString(1, fecha.toString());
             stmt.setString(2, observaciones);
-            stmt.setString(3, idAlumno);
-            stmt.setInt(4, idTutor);
+            stmt.setInt(3, idAlumno);
+            stmt.setString(4, nombre);
+            stmt.setString(5, apellidos);
+            stmt.setInt(6, idTutor);
+            stmt.setString(7, nombreTutor);
             int i = stmt.executeUpdate();
             if (i > 0) {
                 try (ResultSet generatedKeys = stmt.getGeneratedKeys()) {
@@ -134,6 +156,58 @@ public class VisitaController implements Initializable {
         }
     }
 
+
+    private String obtenerNombreAlumno(Integer idAlumno){
+        String sql = "SELECT Nombre FROM alumno WHERE Id_Alumno = ?";
+        String nombre = "";
+        try (Connection conn = getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, idAlumno);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                nombre = rs.getString("Nombre");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return nombre;
+    }
+
+    private String obtenerApellidosAlumno(Integer idAlumno) {
+        String sql = "SELECT Apellidos FROM alumno WHERE Id_Alumno = ?";
+        String apellidos = "";
+        try (Connection conn = getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, idAlumno);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                apellidos = rs.getString("Apellidos");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return apellidos;
+    }
+
+
+
+    private String obtenerNombreTutor(Integer idTutor){
+        String sql = "SELECT Nombre FROM tutor_grupo WHERE Id_Tutor = ?";
+        String nombreTutor = "";
+        try (Connection conn = getConnection();
+             PreparedStatement stmt = conn.prepareStatement(sql)) {
+            stmt.setInt(1, idTutor);
+            ResultSet rs = stmt.executeQuery();
+            if (rs.next()) {
+                nombreTutor = rs.getString("Nombre");
+            }
+        } catch (SQLException e) {
+            e.printStackTrace();
+        }
+        return nombreTutor;
+    }
+
+
     @Override
     public void initialize(URL location, ResourceBundle resources) {
         IdVisitas.setCellValueFactory(new PropertyValueFactory<>("IdVisita"));
@@ -141,6 +215,9 @@ public class VisitaController implements Initializable {
         IdAlumno.setCellValueFactory(new PropertyValueFactory<>("IdAlumno"));
         Fecha.setCellValueFactory(new PropertyValueFactory<>("fecha"));
         Observaciones.setCellValueFactory(new PropertyValueFactory<>("observaciones"));
+        nombreAlumno.setCellValueFactory(new PropertyValueFactory<>("nombreAlumno"));
+        nombreTutor.setCellValueFactory(new PropertyValueFactory<>("nombreTutorGrupo"));
+        apellidosAlumno.setCellValueFactory(new PropertyValueFactory<>("apellidosAlumno"));
         cargarTablaVisita();
         tableVisitas.setItems(visitasLista);
         Fecha.setCellValueFactory(cellData -> cellData.getValue().fechaProperty());
@@ -179,7 +256,10 @@ public class VisitaController implements Initializable {
                         rs.getDate("Fecha_Visita").toLocalDate(),
                         rs.getString("Observaciones"),
                         rs.getInt("Id_Alumno"),
-                        rs.getInt("Id_Tutor")
+                        rs.getInt("Id_Tutor"),
+                        rs.getString("nombreAlumno"),
+                        rs.getString("nombreTutorGrupo"),
+                        rs.getString("apellidosAlumno")
                 ));
             }
             tableVisitas.setItems(visitasLista);

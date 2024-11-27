@@ -31,7 +31,10 @@
                       <TableColumn fx:id="Fecha" prefWidth="75.0" text="Fecha de la visita" />
                         <TableColumn fx:id="Observaciones" prefWidth="75.0" text="Observaciones" />
                         <TableColumn fx:id="IdAlumno" prefWidth="75.0" text="Id del Alumno" />
+                        <TableColumn fx:id="nombreAlumno" prefWidth="75.0" text="nombreAlumno" />
+                        <TableColumn fx:id="apellidosAlumno" prefWidth="75.0" text="apellidosAlumno" />
                         <TableColumn fx:id="IdTutor" prefWidth="75.0" text="Id del tutor" />
+                        <TableColumn fx:id="nombreTutor" prefWidth="75.0" text="nombreTutorGrupo" />
                     </columns>
                   </TableView>
                </children>
