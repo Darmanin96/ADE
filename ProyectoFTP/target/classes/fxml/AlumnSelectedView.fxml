@@ -14,12 +14,15 @@
 
 <BorderPane fx:id="root" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dad.Controllers.AlumnSelectedController">
    <center>
-      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="0" minWidth="0">
+      <GridPane maxHeight="Infinity" maxWidth="Infinity" minHeight="0" minWidth="0">
          <columnConstraints>
+            <!-- Primera columna con un tamaño fijo -->
             <ColumnConstraints hgrow="NEVER" />
+            <!-- Segunda columna con crecimiento flexible -->
             <ColumnConstraints hgrow="ALWAYS" />
          </columnConstraints>
          <rowConstraints>
+            <!-- Todas las filas con crecimiento vertical flexible -->
             <RowConstraints vgrow="ALWAYS" />
             <RowConstraints vgrow="ALWAYS" />
             <RowConstraints vgrow="ALWAYS" />
@@ -29,6 +32,7 @@
             <RowConstraints vgrow="ALWAYS" />
          </rowConstraints>
          <children>
+            <!-- Etiquetas con márgenes consistentes -->
             <Label text="Nombre">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -64,6 +68,8 @@
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
                </GridPane.margin>
             </Label>
+
+            <!-- Campos de texto y controles con redimensionamiento flexible -->
             <TextField fx:id="Nombre" GridPane.columnIndex="1" GridPane.hgrow="ALWAYS">
                <GridPane.margin>
                   <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
@@ -103,7 +109,8 @@
       </GridPane>
    </center>
    <bottom>
-      <HBox alignment="TOP_RIGHT" BorderPane.alignment="TOP_LEFT">
+      <!-- Distribución de los botones en un HBox -->
+      <HBox alignment="TOP_RIGHT" BorderPane.alignment="TOP_LEFT" spacing="10.0">
          <children>
             <Button fx:id="Actualizar" defaultButton="true" mnemonicParsing="false" onAction="#onActionActualizar" text="Actualizar">
                <HBox.margin>

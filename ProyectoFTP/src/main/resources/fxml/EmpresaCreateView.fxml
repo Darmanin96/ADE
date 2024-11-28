@@ -14,20 +14,20 @@
 
 <BorderPane fx:id="root" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1">
    <center>
-      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
-        </rowConstraints>
+      <GridPane>
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES"/>
+            <ColumnConstraints hgrow="SOMETIMES"/>
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES"/>
+            <RowConstraints vgrow="SOMETIMES"/>
+            <RowConstraints vgrow="SOMETIMES"/>
+            <RowConstraints vgrow="SOMETIMES"/>
+            <RowConstraints vgrow="SOMETIMES"/>
+            <RowConstraints vgrow="SOMETIMES"/>
+            <RowConstraints vgrow="SOMETIMES"/>
+         </rowConstraints>
          <children>
             <Label text="Nombre">
                <GridPane.margin>

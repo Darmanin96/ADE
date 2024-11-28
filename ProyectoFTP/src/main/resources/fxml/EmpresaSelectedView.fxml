@@ -14,112 +14,103 @@
 
 <BorderPane fx:id="root" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dad.Controllers.EmpresaSelectedController">
    <center>
-      <GridPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity">
-        <columnConstraints>
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" />
-          <ColumnConstraints hgrow="SOMETIMES" maxWidth="-Infinity" />
-        </columnConstraints>
-        <rowConstraints>
-          <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
-            <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
-          <RowConstraints maxHeight="-Infinity" vgrow="SOMETIMES" />
-        </rowConstraints>
-         <children>
-            <Label text="Nombre">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin>
-            </Label>
-            <Label text="Especialidad" GridPane.rowIndex="6">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin>
-            </Label>
-            <Label text="Dirección" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin>
-            </Label>
-            <Label text="Teléfono" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin>
-            </Label>
-            <Label text="Correo" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin>
-            </Label>
-            <Label text="Participa" GridPane.rowIndex="4">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin>
-            </Label>
-            <Label text="Plazas" GridPane.rowIndex="5">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin>
-            </Label>
-            <TextField fx:id="Nombre" GridPane.columnIndex="1">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField fx:id="Direccion" GridPane.columnIndex="1" GridPane.rowIndex="1">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField fx:id="Telefono" GridPane.columnIndex="1" GridPane.rowIndex="2">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField fx:id="Correo" GridPane.columnIndex="1" GridPane.rowIndex="3">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin>
-            </TextField>
-            <TextField fx:id="Especialidad" GridPane.columnIndex="1" GridPane.rowIndex="6">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin>
-            </TextField>
-            <CheckBox fx:id="Participa" mnemonicParsing="false" GridPane.columnIndex="1" GridPane.rowIndex="4">
-               <GridPane.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </GridPane.margin>
-            </CheckBox>
-            <Spinner fx:id="Plazas" GridPane.columnIndex="1" GridPane.rowIndex="5">
-               <padding>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </padding>
-            </Spinner>
-         </children>
+      <GridPane maxHeight="Infinity" maxWidth="Infinity" minHeight="0" minWidth="0" hgap="10" vgap="10">
+         <columnConstraints>
+            <ColumnConstraints hgrow="SOMETIMES" />
+            <ColumnConstraints hgrow="SOMETIMES" />
+         </columnConstraints>
+         <rowConstraints>
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+            <RowConstraints vgrow="SOMETIMES" />
+         </rowConstraints>
+
+         <!-- Labels -->
+         <Label text="Nombre">
+            <GridPane.margin>
+               <Insets top="5.0" right="5.0" bottom="5.0" left="5.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="Dirección" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets top="5.0" right="5.0" bottom="5.0" left="5.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="Teléfono" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets top="5.0" right="5.0" bottom="5.0" left="5.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="Correo" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets top="5.0" right="5.0" bottom="5.0" left="5.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="Participa" GridPane.rowIndex="4">
+            <GridPane.margin>
+               <Insets top="5.0" right="5.0" bottom="5.0" left="5.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="Plazas" GridPane.rowIndex="5">
+            <GridPane.margin>
+               <Insets top="5.0" right="5.0" bottom="5.0" left="5.0" />
+            </GridPane.margin>
+         </Label>
+         <Label text="Especialidad" GridPane.rowIndex="6">
+            <GridPane.margin>
+               <Insets top="5.0" right="5.0" bottom="5.0" left="5.0" />
+            </GridPane.margin>
+         </Label>
+
+         <!-- Input Fields -->
+         <TextField fx:id="Nombre" GridPane.columnIndex="1" GridPane.rowIndex="0">
+            <GridPane.margin>
+               <Insets top="5.0" right="5.0" bottom="5.0" left="5.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="Direccion" GridPane.columnIndex="1" GridPane.rowIndex="1">
+            <GridPane.margin>
+               <Insets top="5.0" right="5.0" bottom="5.0" left="5.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="Telefono" GridPane.columnIndex="1" GridPane.rowIndex="2">
+            <GridPane.margin>
+               <Insets top="5.0" right="5.0" bottom="5.0" left="5.0" />
+            </GridPane.margin>
+         </TextField>
+         <TextField fx:id="Correo" GridPane.columnIndex="1" GridPane.rowIndex="3">
+            <GridPane.margin>
+               <Insets top="5.0" right="5.0" bottom="5.0" left="5.0" />
+            </GridPane.margin>
+         </TextField>
+         <CheckBox fx:id="Participa" GridPane.columnIndex="1" GridPane.rowIndex="4" mnemonicParsing="false">
+            <GridPane.margin>
+               <Insets top="5.0" right="5.0" bottom="5.0" left="5.0" />
+            </GridPane.margin>
+         </CheckBox>
+         <Spinner fx:id="Plazas" GridPane.columnIndex="1" GridPane.rowIndex="5">
+            <padding>
+               <Insets top="5.0" right="5.0" bottom="5.0" left="5.0"/>
+            </padding>
+         </Spinner>
+         <TextField fx:id="Especialidad" GridPane.columnIndex="1" GridPane.rowIndex="6">
+            <GridPane.margin>
+               <Insets top="5.0" right="5.0" bottom="5.0" left="5.0" />
+            </GridPane.margin>
+         </TextField>
       </GridPane>
    </center>
+
    <bottom>
-      <HBox alignment="TOP_RIGHT" BorderPane.alignment="CENTER">
+      <HBox alignment="CENTER" spacing="10">
          <children>
-            <Button fx:id="Actualizar" defaultButton="true" mnemonicParsing="false" onAction="#onActualizarAction" text="Actualizar">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-            </Button>
-            <Button fx:id="Cancelar" mnemonicParsing="false" onAction="#onCancelarAction" text="Cancelar">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-            </Button>
-            <Button fx:id="Limpiar" mnemonicParsing="false" onAction="#onLimpiarAction" text="Limpiar">
-               <HBox.margin>
-                  <Insets bottom="5.0" left="5.0" right="5.0" top="5.0" />
-               </HBox.margin>
-            </Button>
+            <Button fx:id="Actualizar" defaultButton="true" mnemonicParsing="false" onAction="#onActualizarAction" text="Actualizar" />
+            <Button fx:id="Cancelar" mnemonicParsing="false" onAction="#onCancelarAction" text="Cancelar" />
+            <Button fx:id="Limpiar" mnemonicParsing="false" onAction="#onLimpiarAction" text="Limpiar" />
          </children>
          <BorderPane.margin>
             <Insets top="5.0" />

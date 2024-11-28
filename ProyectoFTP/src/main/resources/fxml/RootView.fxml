@@ -51,7 +51,7 @@
       </TabPane>
    </center>
    <top>
-      <ToolBar BorderPane.alignment="CENTER_LEFT">
+      <ToolBar BorderPane.alignment="CENTER">
         <items>
             <HBox alignment="CENTER_RIGHT">
                <children>
