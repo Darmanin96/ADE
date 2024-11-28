@@ -12,45 +12,46 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dad.Controllers.AlumnController">
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dad.Controllers.AlumnController">
     <center>
-        <GridPane maxHeight="Infinity" maxWidth="Infinity" minHeight="0" minWidth="0">
+        <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
             <columnConstraints>
-                <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" prefWidth="200.0" />
-                <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" prefWidth="200.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints minHeight="50.0" prefHeight="150.0" vgrow="ALWAYS" />
+                <RowConstraints minHeight="100.0" vgrow="ALWAYS" />
+                <RowConstraints vgrow="ALWAYS" />
             </rowConstraints>
             <children>
-                <HBox spacing="10.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
-                    <TableView fx:id="tableAlumn" maxHeight="Infinity" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                <HBox>
+                    <TableView fx:id="tableAlumn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                         <columns>
-                            <TableColumn fx:id="id_Alumn" prefWidth="75.0" text="Id del Alumno" />
-                            <TableColumn fx:id="Nombre" prefWidth="75.0" text="Nombre" />
-                            <TableColumn fx:id="Apellidos" prefWidth="75.0" text="Apellidos" />
-                            <TableColumn fx:id="tutorEmpresa" prefWidth="75.0" text="Tutor de empresa" />
-                            <TableColumn fx:id="tutorGrupo" prefWidth="75.0" text="Tutor de grupo" />
-                            <TableColumn fx:id="Pendientes" prefWidth="75.0" text="Pendientes" />
-                            <TableColumn fx:id="Programa" prefWidth="75.0" text="Curso" />
-                            <TableColumn fx:id="Contacto" prefWidth="75.0" text="Contacto" />
+                            <TableColumn fx:id="id_Alumn" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" text="Id del Alumno" />
+                            <TableColumn fx:id="Nombre" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" text="Nombre" />
+                            <TableColumn fx:id="Apellidos" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="75.0" text="Apellidos" />
+                            <TableColumn fx:id="tutorEmpresa" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="120.0" text="Tutor de empresa" />
+                            <TableColumn fx:id="tutorGrupo" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" text="Tutor de grupo" />
+                            <TableColumn fx:id="Pendientes" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="100.0" text="Pendientes" />
+                            <TableColumn fx:id="Programa" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="60.0" text="Curso" />
+                            <TableColumn fx:id="Contacto" maxWidth="1.7976931348623157E308" minWidth="-1.0" text="Contacto" />
                         </columns>
                     </TableView>
                 </HBox>
-
-                <!-- Detalle del Alumno en un AnchorPane, dentro de un HBox -->
-                <HBox alignment="BOTTOM_RIGHT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                <HBox alignment="CENTER" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
+                    <children>
                     <AnchorPane fx:id="detallePanel" maxHeight="Infinity" maxWidth="Infinity" prefHeight="468.0" prefWidth="359.0">
                         <Label contentDisplay="TOP" layoutX="69.0" layoutY="226.0" maxHeight="Infinity" maxWidth="Infinity" text="Seleccione un alumno de la izquierda" />
                     </AnchorPane>
+                    </children>
                 </HBox>
             </children>
         </GridPane>
     </center>
     <bottom>
-        <HBox alignment="CENTER_LEFT" spacing="10.0" BorderPane.alignment="TOP_RIGHT">
+        <HBox alignment="BOTTOM_CENTER" spacing="10.0" BorderPane.alignment="BOTTOM_CENTER">
             <children>
-                <ToolBar maxHeight="Infinity" maxWidth="Infinity" HBox.hgrow="ALWAYS">
+                <ToolBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                     <items>
                         <Button fx:id="añadir" defaultButton="true" mnemonicParsing="false" onAction="#onAñadirAction" text="Añadir" />
                         <Button fx:id="eliminar" maxWidth="Infinity" mnemonicParsing="false" onAction="#onEliminarAction" text="Eliminar" />

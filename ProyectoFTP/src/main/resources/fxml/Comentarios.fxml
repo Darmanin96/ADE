@@ -12,31 +12,32 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane fx:id="root" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dad.Controllers.ComentariosController">
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dad.Controllers.ComentariosController">
     <center>
         <GridPane>
             <columnConstraints>
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
-                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" />
+                <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+                <RowConstraints minHeight="100.0" vgrow="ALWAYS" />
+                <RowConstraints vgrow="ALWAYS" />
             </rowConstraints>
             <children>
                 <HBox>
                     <children>
-                        <TableView fx:id="tableComentarios">
+                        <TableView fx:id="tableComentarios" HBox.hgrow="NEVER">
                             <columns>
-                                <TableColumn fx:id="idComentario" prefWidth="75.0" text="Id del comentario" />
-                                <TableColumn fx:id="Comentario" prefWidth="75.0" text="Comentario" />
-                                <TableColumn fx:id="Fecha" prefWidth="63.2" text="Fecha del comentario" />
-                                <TableColumn fx:id="idEmpresa" prefWidth="75.0" text="Id de la Empresa" />
-                                <TableColumn fx:id="nombreEmpresa" prefWidth="75.0" text="Nombre de la empresa" />
+                                <TableColumn fx:id="idComentario" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="150.0" text="Id del comentario" />
+                                <TableColumn fx:id="Comentario" maxWidth="1.7976931348623157E308" minWidth="-1.0" text="Comentario" />
+                                <TableColumn fx:id="Fecha" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="130.0" text="Fecha del comentario" />
+                                <TableColumn fx:id="idEmpresa" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="110.0" text="Id de la Empresa" />
+                                <TableColumn fx:id="nombreEmpresa" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="150.0" text="Nombre de la empresa" />
                             </columns>
                         </TableView>
                     </children>
                 </HBox>
-                <HBox alignment="CENTER" prefHeight="100.0" GridPane.columnIndex="1">
+                <HBox alignment="BOTTOM_CENTER"  spacing="10.0" BorderPane.alignment="BOTTOM_CENTER">
                     <children>
                         <AnchorPane fx:id="detallePanel">
                             <children>
@@ -49,7 +50,7 @@
         </GridPane>
     </center>
     <bottom>
-        <HBox alignment="BOTTOM_CENTER" BorderPane.alignment="TOP_RIGHT">
+        <HBox alignment="BOTTOM_CENTER" BorderPane.alignment="CENTER">
             <children>
                 <ToolBar HBox.hgrow="ALWAYS">
                     <items>

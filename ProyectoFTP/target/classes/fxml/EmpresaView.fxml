@@ -58,7 +58,7 @@
         <!-- Barra de herramientas en la parte inferior -->
         <HBox alignment="BOTTOM_CENTER" spacing="10.0" BorderPane.alignment="BOTTOM_CENTER">
             <children>
-                <ToolBar maxHeight="Infinity" maxWidth="Infinity">
+                <ToolBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                     <items>
                         <Button fx:id="Añadir" defaultButton="true" mnemonicParsing="false" onAction="#onAñadirAction" text="Añadir" />
                         <Button fx:id="Eliminar" mnemonicParsing="false" onAction="#onEliminarAction" text="Eliminar" />

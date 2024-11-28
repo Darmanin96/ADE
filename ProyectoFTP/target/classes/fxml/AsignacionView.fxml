@@ -18,16 +18,16 @@
          <children>
             <TableView fx:id="tableAsignacion">
               <columns>
-                <TableColumn fx:id="idAsignacion" prefWidth="75.0" text="Id de la Asignación" />
-                <TableColumn fx:id="idAlumno" prefWidth="75.0" text="Id del Alumno" />
-                  <TableColumn fx:id="Nombre" prefWidth="75.0" text="Nombre" />
-                  <TableColumn fx:id="Apellidos" prefWidth="75.0" text="Apellidos" />
-                  <TableColumn fx:id="idEmpresa" prefWidth="75.0" text="Id de la Empresa" />
-                  <TableColumn fx:id="Empresa" prefWidth="75.0" text="Empresa" />
-                  <TableColumn fx:id="IdTutorEmpresa" prefWidth="75.0" text="Id del Tutor de la Empresa" />
-                  <TableColumn fx:id="IdTutorGrupo" prefWidth="75.0" text="Id del Tutor del Docente" />
-                  <TableColumn fx:id="FechaInicio" prefWidth="75.0" text="Fecha de Inicio" />
-                  <TableColumn fx:id="FechaFin" prefWidth="75.0" text="Fecha final" />
+                <TableColumn fx:id="idAsignacion" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="75.0" text="Id de la Asignación" />
+                <TableColumn fx:id="idAlumno" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="75.0" text="Id del Alumno" />
+                  <TableColumn fx:id="Nombre" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="75.0" text="Nombre" />
+                  <TableColumn fx:id="Apellidos" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="75.0" text="Apellidos" />
+                  <TableColumn fx:id="idEmpresa" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="75.0" text="Id de la Empresa" />
+                  <TableColumn fx:id="Empresa" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="75.0" text="Empresa" />
+                  <TableColumn fx:id="IdTutorEmpresa" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="75.0" text="Id del Tutor de la Empresa" />
+                  <TableColumn fx:id="IdTutorGrupo" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="75.0" text="Id del Tutor del Docente" />
+                  <TableColumn fx:id="FechaInicio" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="75.0" text="Fecha de Inicio" />
+                  <TableColumn fx:id="FechaFin" maxWidth="1.7976931348623157E308" minWidth="-1.0" prefWidth="75.0" text="Fecha final" />
               </columns>
             </TableView>
             <HBox>
