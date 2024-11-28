@@ -1,0 +1,35 @@
+/* Modo Claro */
+.root {
+    -fx-background-color: #ffffff; /* Fondo blanco */
+    -fx-text-fill: black; /* Texto oscuro */
+}
+
+.button {
+    -fx-background-color: #f0f0f0;
+    -fx-text-fill: black;
+}
+
+.button:hover {
+    -fx-background-color: #e0e0e0;
+}
+
+.tab-pane {
+    -fx-background-color: #ffffff;
+    -fx-text-fill: black;
+}
+
+.tab {
+    -fx-background-color: #f0f0f0;
+}
+
+.tab:selected {
+    -fx-background-color: #d0d0d0;
+}
+
+.tool-bar {
+    -fx-background-color: #f0f0f0;
+}
+
+.label {
+    -fx-text-fill: black;
+}

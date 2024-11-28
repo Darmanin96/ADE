@@ -1,0 +1,60 @@
+/* Modo Oscuro con Pestañas Negras y Texto Blanco Más Brillante */
+.root {
+    -fx-background-color: #121212; /* Fondo más oscuro */
+    -fx-text-fill: #FFFFFF; /* Texto blanco */
+}
+
+.button {
+    -fx-background-color: #1C1C1C; /* Fondo de botón más oscuro */
+    -fx-text-fill: #FFFFFF; /* Texto de botón blanco */
+}
+
+.button:hover {
+    -fx-background-color: #2B2B2B; /* Color de botón al pasar el ratón más oscuro */
+}
+
+.tab-pane {
+    -fx-background-color: #1C1C1C; /* Fondo de pestaña más oscuro */
+    -fx-text-fill: #FFFFFF; /* Texto de pestaña blanco */
+}
+
+.tab {
+    -fx-background-color: #000000; /* Fondo de pestaña negro */
+    -fx-text-fill: #FFFFFF; /* Texto blanco brillante en pestaña */
+    -fx-font-weight: bold; /* Hace el texto más prominente */
+}
+
+.tab:selected {
+    -fx-background-color: #000000; /* Fondo de pestaña seleccionada negro */
+    -fx-text-fill: #FFFFFF; /* Texto blanco brillante en pestaña seleccionada */
+    -fx-font-weight: bold; /* Hace el texto más prominente */
+}
+
+.tool-bar {
+    -fx-background-color: #1C1C1C; /* Fondo de barra de herramientas más oscuro */
+}
+
+.label {
+    -fx-text-fill: #FFFFFF; /* Color de texto de etiqueta blanco */
+}
+
+/* Modo Oscuro para TableView */
+.table-view {
+    -fx-background-color: #1C1C1C; /* Fondo de tabla más oscuro */
+    -fx-text-fill: #FFFFFF; /* Texto de tabla blanco */
+}
+
+.table-view .column-header {
+    -fx-background-color: #2A2A2A; /* Fondo de encabezado de columna más oscuro */
+    -fx-text-fill: #FFFFFF; /* Texto de encabezado de columna blanco */
+}
+
+.table-view .cell {
+    -fx-background-color: #1C1C1C; /* Fondo de celda más oscuro */
+    -fx-text-fill: #FFFFFF; /* Texto de celda blanco */
+}
+
+.table-view .cell:selected {
+    -fx-background-color: #2B2B2B; /* Fondo de celda seleccionada más oscuro */
+    -fx-text-fill: #FFFFFF; /* Texto de celda seleccionada blanco */
+}

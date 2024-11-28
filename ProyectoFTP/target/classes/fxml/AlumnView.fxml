@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.TableColumn?>
+<?import javafx.scene.control.TableView?>
+<?import javafx.scene.control.ToolBar?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.BorderPane?>
+<?import javafx.scene.layout.ColumnConstraints?>
+<?import javafx.scene.layout.GridPane?>
+<?import javafx.scene.layout.HBox?>
+<?import javafx.scene.layout.RowConstraints?>
+<?import javafx.scene.layout.VBox?>
+
+<BorderPane fx:id="root" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="503.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dad.Controllers.AlumnController">
+    <center>
+        <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity">
+            <columnConstraints>
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+                <ColumnConstraints hgrow="SOMETIMES" minWidth="10.0" prefWidth="200.0" />
+            </columnConstraints>
+            <rowConstraints>
+                <RowConstraints minHeight="10.0" prefHeight="30.0" vgrow="SOMETIMES" />
+            </rowConstraints>
+            <children>
+                <!-- Tabla de Alumnos -->
+                <VBox alignment="TOP_LEFT" spacing="10.0">
+                    <TableView fx:id="tableAlumn" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
+                        <columns>
+                            <TableColumn fx:id="id_Alumn" prefWidth="75.0" text="Id del Alumno" />
+                            <TableColumn fx:id="Nombre" prefWidth="75.0" text="Nombre" />
+                            <TableColumn fx:id="Apellidos" prefWidth="75.0" text="Apellidos" />
+                            <TableColumn fx:id="tutorEmpresa" prefWidth="75.0" text="Tutor de empresa" />
+                            <TableColumn fx:id="tutorGrupo" prefWidth="75.0" text="Tutor de grupo" />
+                            <TableColumn fx:id="Pendientes" prefWidth="75.0" text="Pendientes" />
+                            <TableColumn fx:id="Programa" prefWidth="75.0" text="Curso" />
+                            <TableColumn fx:id="Contacto" prefWidth="75.0" text="Contacto" />
+                        </columns>
+                    </TableView>
+                </VBox>
+
+                <!-- Detalle del Alumno -->
+                <HBox alignment="BOTTOM_RIGHT" GridPane.columnIndex="1" spacing="10.0">
+                    <AnchorPane fx:id="detallePanel" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" prefHeight="468.0" prefWidth="359.0" HBox.hgrow="ALWAYS" style="-fx-border-color: gray; -fx-border-width: 2;">
+                        <Label contentDisplay="TOP" layoutX="69.0" layoutY="226.0" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" text="Seleccione un alumno de la izquierda" style="-fx-font-size: 16px;"/>
+                    </AnchorPane>
+                </HBox>
+            </children>
+        </GridPane>
+    </center>
+    <bottom>
+        <HBox alignment="CENTER_LEFT" BorderPane.alignment="TOP_RIGHT" spacing="10.0" style="-fx-padding: 10px;">
+            <children>
+                <ToolBar maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" HBox.hgrow="ALWAYS">
+                    <items>
+                        <!-- Botones Mejorados -->
+                        <Button fx:id="añadir" defaultButton="true" mnemonicParsing="false" onAction="#onAñadirAction" text="Añadir" style="-fx-background-color: #4CAF50; -fx-text-fill: white;"/>
+                        <Button fx:id="eliminar" maxWidth="1.7976931348623157E308" mnemonicParsing="false" onAction="#onEliminarAction" text="Eliminar" style="-fx-background-color: #F44336; -fx-text-fill: white;"/>
+                    </items>
+                </ToolBar>
+            </children>
+        </HBox>
+    </bottom>
+</BorderPane>

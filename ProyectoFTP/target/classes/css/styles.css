@@ -1,0 +1,22 @@
+.button {
+    -fx-background-color: #4CAF50;
+    -fx-text-fill: white;
+}
+
+.button:hover {
+    -fx-background-color: #45a049;
+}
+
+.tab-pane {
+    -fx-tab-min-width: 120px;
+}
+
+.label {
+    -fx-font-size: 14px;
+    -fx-text-fill: #333;
+}
+
+.table-view {
+    -fx-border-width: 2;
+    -fx-border-color: #cccccc;
+}
