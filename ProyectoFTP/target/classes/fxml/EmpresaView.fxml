@@ -12,37 +12,37 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane fx:id="root" prefHeight="500.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dad.Controllers.EmpresaController">
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dad.Controllers.EmpresaController">
     <center>
-        <GridPane maxHeight="Infinity" maxWidth="Infinity" minHeight="0" minWidth="0" prefHeight="400.0" prefWidth="600.0">
+        <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
             <columnConstraints>
                 <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" />
                 <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints vgrow="ALWAYS" minHeight="100.0" />
+                <RowConstraints minHeight="100.0" vgrow="ALWAYS" />
                 <RowConstraints vgrow="ALWAYS" />
             </rowConstraints>
             <children>
                 <!-- TableView para las empresas -->
                 <HBox>
                     <children>
-                        <TableView fx:id="tableEmpresa" maxHeight="Infinity" maxWidth="Infinity">
+                        <TableView fx:id="tableEmpresa" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
                             <columns>
-                                <TableColumn fx:id="Id_Empresa" prefWidth="100.0" text="Id de la Empresa" />
-                                <TableColumn fx:id="Nombre" prefWidth="100.0" text="Nombre" />
-                                <TableColumn fx:id="Direccion" prefWidth="100.0" text="Dirección" />
-                                <TableColumn fx:id="Telefono" prefWidth="100.0" text="Teléfono" />
-                                <TableColumn fx:id="Correo" prefWidth="100.0" text="Correo" />
-                                <TableColumn fx:id="Participa" prefWidth="100.0" text="Participa" />
-                                <TableColumn fx:id="Plazas" prefWidth="100.0" text="Plazas" />
-                                <TableColumn fx:id="Especialidad" prefWidth="100.0" text="Especialidad" />
+                                <TableColumn fx:id="Id_Empresa" maxWidth="-1.0" minWidth="-1.0" prefWidth="-1.0" text="Id de la Empresa" />
+                                <TableColumn fx:id="Nombre" minWidth="-1.0" prefWidth="100.0" text="Nombre" />
+                                <TableColumn fx:id="Direccion" minWidth="-1.0" prefWidth="100.0" text="Dirección" />
+                                <TableColumn fx:id="Telefono" minWidth="-1.0" prefWidth="100.0" text="Teléfono" />
+                                <TableColumn fx:id="Correo" minWidth="-1.0" prefWidth="100.0" text="Correo" />
+                                <TableColumn fx:id="Participa" minWidth="-1.0" prefWidth="100.0" text="Participa" />
+                                <TableColumn fx:id="Plazas" minWidth="-1.0" prefWidth="100.0" text="Plazas" />
+                                <TableColumn fx:id="Especialidad" minWidth="-1.0" prefWidth="100.0" text="Especialidad" />
                             </columns>
                         </TableView>
                     </children>
                 </HBox>
                 <!-- Panel de detalles a la derecha -->
-                <HBox alignment="CENTER" prefHeight="100.0" prefWidth="200.0" GridPane.columnIndex="1">
+                <HBox alignment="CENTER" GridPane.columnIndex="1">
                     <children>
                         <AnchorPane fx:id="detallePanel" HBox.hgrow="ALWAYS">
                             <children>
@@ -56,11 +56,11 @@
     </center>
     <bottom>
         <!-- Barra de herramientas en la parte inferior -->
-        <HBox alignment="BOTTOM_CENTER" BorderPane.alignment="BOTTOM_CENTER" spacing="10.0">
+        <HBox alignment="BOTTOM_CENTER" spacing="10.0" BorderPane.alignment="BOTTOM_CENTER">
             <children>
                 <ToolBar maxHeight="Infinity" maxWidth="Infinity">
                     <items>
-                        <Button fx:id="Añadir" mnemonicParsing="false" onAction="#onAñadirAction" text="Añadir" />
+                        <Button fx:id="Añadir" defaultButton="true" mnemonicParsing="false" onAction="#onAñadirAction" text="Añadir" />
                         <Button fx:id="Eliminar" mnemonicParsing="false" onAction="#onEliminarAction" text="Eliminar" />
                     </items>
                 </ToolBar>

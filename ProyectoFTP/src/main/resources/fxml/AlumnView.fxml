@@ -12,18 +12,18 @@
 <?import javafx.scene.layout.HBox?>
 <?import javafx.scene.layout.RowConstraints?>
 
-<BorderPane fx:id="root" maxHeight="Infinity" maxWidth="Infinity" prefHeight="503.0" prefWidth="708.0" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dad.Controllers.AlumnController">
+<BorderPane fx:id="root" xmlns="http://javafx.com/javafx/23" xmlns:fx="http://javafx.com/fxml/1" fx:controller="dad.Controllers.AlumnController">
     <center>
-        <GridPane maxHeight="Infinity" maxWidth="Infinity" minHeight="0" minWidth="0">
+        <GridPane maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308">
             <columnConstraints>
                 <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" prefWidth="200.0" />
                 <ColumnConstraints hgrow="ALWAYS" minWidth="100.0" prefWidth="200.0" />
             </columnConstraints>
             <rowConstraints>
-                <RowConstraints vgrow="ALWAYS" minHeight="50.0" prefHeight="150.0"/>
+                <RowConstraints minHeight="50.0" prefHeight="150.0" vgrow="ALWAYS" />
             </rowConstraints>
             <children>
-                <HBox GridPane.columnIndex="0" GridPane.rowIndex="0" spacing="10.0">
+                <HBox spacing="10.0" GridPane.columnIndex="0" GridPane.rowIndex="0">
                     <TableView fx:id="tableAlumn" maxHeight="Infinity" maxWidth="Infinity" HBox.hgrow="ALWAYS">
                         <columns>
                             <TableColumn fx:id="id_Alumn" prefWidth="75.0" text="Id del Alumno" />
@@ -39,7 +39,7 @@
                 </HBox>
 
                 <!-- Detalle del Alumno en un AnchorPane, dentro de un HBox -->
-                <HBox GridPane.columnIndex="1" GridPane.rowIndex="0" alignment="BOTTOM_RIGHT" spacing="10.0">
+                <HBox alignment="BOTTOM_RIGHT" spacing="10.0" GridPane.columnIndex="1" GridPane.rowIndex="0">
                     <AnchorPane fx:id="detallePanel" maxHeight="Infinity" maxWidth="Infinity" prefHeight="468.0" prefWidth="359.0">
                         <Label contentDisplay="TOP" layoutX="69.0" layoutY="226.0" maxHeight="Infinity" maxWidth="Infinity" text="Seleccione un alumno de la izquierda" />
                     </AnchorPane>
@@ -48,7 +48,7 @@
         </GridPane>
     </center>
     <bottom>
-        <HBox alignment="CENTER_LEFT" BorderPane.alignment="TOP_RIGHT" spacing="10.0">
+        <HBox alignment="CENTER_LEFT" spacing="10.0" BorderPane.alignment="TOP_RIGHT">
             <children>
                 <ToolBar maxHeight="Infinity" maxWidth="Infinity" HBox.hgrow="ALWAYS">
                     <items>
